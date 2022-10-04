@@ -18,7 +18,7 @@ function App() {
           id="change-theme"
           onChange={() => setIsGreenTheme(!isGreenTheme)}
         />
-        <label htmlFor="change-theme">Переключить тему</label>
+        <label htmlFor="change-theme">Использовать зелёную тему</label>
       </div>
     </HelmetProvider>
   );
