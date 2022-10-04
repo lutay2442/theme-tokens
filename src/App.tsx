@@ -4,7 +4,6 @@ import "./App.css";
 
 function App() {
   const [isGreenTheme, setIsGreenTheme] = useState(false);
-  const onChangeTheme = () => setIsGreenTheme(!isGreenTheme);
 
   return (
     <HelmetProvider>
@@ -14,7 +13,11 @@ function App() {
             <link rel="stylesheet" type="text/css" href="./green.css" />
           </Helmet>
         )}
-        <input type="checkbox" id="change-theme" onChange={onChangeTheme} />
+        <input
+          type="checkbox"
+          id="change-theme"
+          onChange={() => setIsGreenTheme(!isGreenTheme)}
+        />
         <label htmlFor="change-theme">Переключить тему</label>
       </div>
     </HelmetProvider>
